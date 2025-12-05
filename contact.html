@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Natural Remedy Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-[#181818] text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+    <!-- Header with Back Button -->
+    <header class="bg-gradient-to-r from-primary to-purple-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to App</span>
+                </a>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-envelope text-2xl"></i>
+                    <h1 class="text-xl sm:text-2xl font-bold">Contact Us</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Introduction -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">We'd Love to Hear From You</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                Have questions, feedback, or suggestions? Get in touch with our team and we'll respond as soon as possible.
+            </p>
+        </div>
+
+        <!-- Emergency Notice -->
+        <div class="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-6 mb-8 rounded-r-lg">
+            <h3 class="text-xl font-bold text-red-800 dark:text-red-300 mb-2 flex items-center">
+                <i class="fas fa-ambulance mr-2"></i>
+                Medical Emergencies
+            </h3>
+            <p class="text-red-700 dark:text-red-300 font-semibold">
+                If you are experiencing a medical emergency, DO NOT use this contact form. Call 911 (US) or your local emergency services immediately, or contact your doctor directly.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+            <!-- Contact Form -->
+            <div class="md:col-span-2">
+                <div class="bg-gray-50 dark:bg-gray-900 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-gray-800">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
+                        <i class="fas fa-paper-plane text-primary mr-3"></i>
+                        Send Us a Message
+                    </h3>
+
+                    <form id="contactForm" class="space-y-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Your Name <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="w-full px-4 py-3 text-base rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all outline-none"
+                                placeholder="John Doe"
+                            >
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Email Address <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="w-full px-4 py-3 text-base rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all outline-none"
+                                placeholder="john@example.com"
+                            >
+                        </div>
+
+                        <!-- Category -->
+                        <div>
+                            <label for="category" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Category <span class="text-red-500">*</span>
+                            </label>
+                            <select
+                                id="category"
+                                name="category"
+                                required
+                                class="w-full px-4 py-3 text-base rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all outline-none"
+                            >
+                                <option value="">Select a category...</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback or Suggestion</option>
+                                <option value="bug">Report a Bug or Error</option>
+                                <option value="content">Content Question or Correction</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="support">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Your Message <span class="text-red-500">*</span>
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                rows="6"
+                                class="w-full px-4 py-3 text-base rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all outline-none resize-vertical"
+                                placeholder="Tell us how we can help..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Privacy Notice -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                            <p class="text-sm text-blue-800 dark:text-blue-300 flex items-start">
+                                <i class="fas fa-lock mr-2 mt-1"></i>
+                                <span><strong>Privacy Note:</strong> We never share your information with third parties. Your message will only be used to respond to your inquiry. See our <a href="privacy.html" class="underline hover:text-primary">Privacy Policy</a>.</span>
+                            </p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="w-full px-6 py-4 bg-primary hover:bg-purple-600 text-white font-semibold text-lg rounded-xl transition-colors shadow-lg hover:shadow-xl"
+                        >
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden mt-6 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-6 rounded-r-lg">
+                        <h4 class="text-lg font-bold text-green-800 dark:text-green-300 mb-2 flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            Message Sent Successfully!
+                        </h4>
+                        <p class="text-green-700 dark:text-green-300">
+                            Thank you for reaching out. We'll respond to your inquiry within 24-48 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-6">
+
+                <!-- Email -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
+                        <i class="fas fa-envelope text-primary mr-2"></i>
+                        Email Support
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-2">
+                        <a href="/cdn-cgi/l/email-protection#dba8aeababb4a9af9bb5baafaea9bab7a9beb6bebfa2bcaeb2bfbef5b8b4b6" class="text-primary hover:underline">
+                            <span class="__cf_email__" data-cfemail="43303633332c3137032d22373631222f31262e26273a24362a27266d202c2e">[email&#160;protected]</span>
+                        </a>
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        For general inquiries and support
+                    </p>
+                </div>
+
+                <!-- Response Time -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
+                        <i class="fas fa-clock text-primary mr-2"></i>
+                        Response Time
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        We typically respond within <strong>24-48 hours</strong> during business days (Monday-Friday).
+                    </p>
+                </div>
+
+                <!-- FAQ Link -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-800">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-2"></i>
+                        Quick Answers
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm">
+                        Your question might already be answered in our FAQ section.
+                    </p>
+                    <a href="faq.html" class="inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i>
+                        View FAQ
+                    </a>
+                </div>
+
+                <!-- Social Media (Placeholder) -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                        <i class="fas fa-share-alt text-primary mr-2"></i>
+                        Follow Us
+                    </h3>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-sky-500 hover:bg-sky-600 text-white rounded-lg transition-colors" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-3">
+                        (Placeholder links - not active)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="mt-12 pt-6 border-t border-gray-300 dark:border-gray-700">
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="privacy.html" class="text-primary hover:underline">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="terms.html" class="text-primary hover:underline">Terms of Service</a>
+                <span class="text-gray-400">|</span>
+                <a href="about.html" class="text-primary hover:underline">About</a>
+                <span class="text-gray-400">|</span>
+                <a href="faq.html" class="text-primary hover:underline">FAQ</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-16 py-6">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600 dark:text-gray-400">
+            <p>© 2024 Natural Remedy Guide | For educational purposes only</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Dark mode support
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                category: document.getElementById('category').value,
+                message: document.getElementById('message').value
+            };
+
+            // In a real implementation, you would send this to a server
+            // For now, we'll just show a success message
+            console.log('Form submitted:', formData);
+
+            // Hide form and show success message
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+
+</body>
+</html>

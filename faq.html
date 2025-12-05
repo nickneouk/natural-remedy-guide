@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Natural Remedy Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-[#181818] text-gray-900 dark:text-gray-100 transition-colors duration-200">
+
+    <!-- Header with Back Button -->
+    <header class="bg-gradient-to-r from-primary to-purple-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to App</span>
+                </a>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-question-circle text-2xl"></i>
+                    <h1 class="text-xl sm:text-2xl font-bold">Frequently Asked Questions</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Introduction -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Common Questions About Natural Remedy Guide</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                Find quick answers to frequently asked questions. Click on any question to expand the answer.
+            </p>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4 mb-12">
+
+            <!-- FAQ 1 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(1)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-question-circle text-primary mr-3"></i>
+                        What is Natural Remedy Guide?
+                    </span>
+                    <i id="icon-1" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-1" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Natural Remedy Guide is a comprehensive educational app providing evidence-based information about 145+ dietary supplements, vitamins, minerals, herbs, and natural remedies. The app includes detailed information on benefits, dosages, safety, interactions, timing, and more. It also features an interaction checker, supplement stacks for specific health goals, and advanced filtering options.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(2)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-hospital text-primary mr-3"></i>
+                        Is this medical advice?
+                    </span>
+                    <i id="icon-2" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-2" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            <strong>NO.</strong> Natural Remedy Guide provides educational information only and is NOT medical advice. The app is NOT intended to diagnose, treat, cure, or prevent any disease.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            You should always consult a qualified healthcare provider before starting any new supplement, especially if you are pregnant, nursing, taking medications, or have a medical condition. This app is designed to help you have more informed conversations with your healthcare providers, not to replace professional medical consultation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(3)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-shield-alt text-primary mr-3"></i>
+                        Can I trust this information?
+                    </span>
+                    <i id="icon-3" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-3" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Our information is compiled from peer-reviewed scientific literature, clinical research databases (like PubMed), government health resources (NIH, FDA, USDA), and evidence-based nutritional science. Each supplement entry includes a "last reviewed" date for transparency.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            However, supplement science is constantly evolving, and individual responses vary. Always verify information with your healthcare provider and cross-check with multiple reputable sources before making health decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(4)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-sync-alt text-primary mr-3"></i>
+                        How often is the information updated?
+                    </span>
+                    <i id="icon-4" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-4" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            We continuously review and update our content to reflect the latest scientific evidence and research findings. Each supplement includes a "last reviewed" date (currently January 2024). Major updates are made quarterly, while minor corrections and additions are made ongoing. We monitor new research and FDA safety announcements to keep information current.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(5)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-user-md text-primary mr-3"></i>
+                        Should I tell my doctor about supplements I'm taking?
+                    </span>
+                    <i id="icon-5" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-5" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            <strong>YES, absolutely!</strong> You should always inform your healthcare providers about all supplements you are taking, including:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Vitamins and minerals</li>
+                            <li>Herbal supplements</li>
+                            <li>Probiotics and enzymes</li>
+                            <li>Amino acids and protein supplements</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            Supplements can interact with medications, affect lab test results, and impact surgical procedures. Your doctor needs this information to provide safe, effective care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(6)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-exclamation-triangle text-primary mr-3"></i>
+                        What if I experience an adverse reaction to a supplement?
+                    </span>
+                    <i id="icon-6" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-6" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <div class="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-lg mb-4">
+                            <p class="text-red-700 dark:text-red-300 font-semibold">
+                                If you experience a serious adverse reaction, seek immediate medical attention. Call 911 or go to the emergency room.
+                            </p>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            For non-emergency adverse reactions:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Stop taking the supplement immediately</li>
+                            <li>Contact your healthcare provider</li>
+                            <li>Report the reaction to the FDA's MedWatch program (www.fda.gov/medwatch)</li>
+                            <li>Keep the supplement bottle for reference</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(7)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-dollar-sign text-primary mr-3"></i>
+                        Are there any costs? Is this app free?
+                    </span>
+                    <i id="icon-7" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-7" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Natural Remedy Guide currently offers full access to all 145+ supplements, the interaction checker, supplement stacks, advanced filters, and all features at no cost. The app is ad-supported or may offer premium features in the future.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Any future premium features or subscription options will be clearly communicated, and the core educational content will remain accessible to all users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(8)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-flask text-primary mr-3"></i>
+                        How do I use the Interaction Checker?
+                    </span>
+                    <i id="icon-8" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-8" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            The Interaction Checker helps identify potential interactions between supplements:
+                        </p>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Click "Open Interaction Checker" button on the main app page</li>
+                            <li>Select the supplements you're currently taking or considering (select at least 2)</li>
+                            <li>Click "Check Interactions"</li>
+                            <li>Review any identified interactions and warnings</li>
+                        </ol>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            <strong>Important:</strong> The interaction checker focuses on supplement-to-supplement interactions. Always consult your pharmacist or doctor about potential interactions with your medications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(9)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-award text-primary mr-3"></i>
+                        What do the badges mean?
+                    </span>
+                    <i id="icon-9" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-9" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Supplements display badges to help you quickly identify important characteristics:
+                        </p>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li><span class="font-semibold">🌱 Vegan:</span> No animal-derived ingredients</li>
+                            <li><span class="font-semibold">🤰 Pregnancy-Safe:</span> Generally considered safe during pregnancy (but ALWAYS consult your OB/GYN first)</li>
+                            <li><span class="font-semibold">🤱 Breastfeeding-Safe:</span> Generally safe while nursing (consult your healthcare provider)</li>
+                            <li><span class="font-semibold">👵 Elderly-Friendly:</span> Particularly beneficial or important for older adults</li>
+                            <li><span class="font-semibold">💰 Budget-Friendly:</span> Generally affordable and widely available</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            These badges are for quick reference only. Individual circumstances vary, so always verify suitability with your healthcare provider.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(10)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-save text-primary mr-3"></i>
+                        Can I save my favorite supplements or create lists?
+                    </span>
+                    <i id="icon-10" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-10" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            This feature is coming soon! We're working on adding the ability to:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Save your favorite supplements</li>
+                            <li>Create custom supplement lists</li>
+                            <li>Track your current supplement regimen</li>
+                            <li>Set reminders for taking supplements</li>
+                            <li>Export your lists to share with healthcare providers</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            For now, you can use the filters and search function to quickly find the supplements you need.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 11 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(11)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-layer-group text-primary mr-3"></i>
+                        What are Supplement Stacks?
+                    </span>
+                    <i id="icon-11" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-11" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Supplement Stacks are pre-researched combinations of supplements designed for specific health goals. Each stack includes:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
+                            <li>A description of the health goal</li>
+                            <li>3-7 recommended supplements that work synergistically</li>
+                            <li>An explanation of why each supplement is included</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Available stacks include:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <li>Immune Boost Stack</li>
+                            <li>Cognitive Enhancement Stack</li>
+                            <li>Heart Health Stack</li>
+                            <li>Women's Hormonal Balance Stack</li>
+                            <li>Joint & Arthritis Stack</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            Click any stack on the main page to view the supplements included.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 12 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(12)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-clock text-primary mr-3"></i>
+                        Does timing matter when taking supplements?
+                    </span>
+                    <i id="icon-12" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-12" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Yes! Timing and administration can significantly impact supplement absorption and effectiveness. Each supplement detail page includes "Timing & Administration" guidance covering:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li><strong>Best Time:</strong> Morning, evening, divided doses, or anytime</li>
+                            <li><strong>With Food:</strong> Required, recommended, empty stomach, or either</li>
+                            <li><strong>Timing Notes:</strong> Specific recommendations for optimal absorption</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            For example, fat-soluble vitamins (A, D, E, K) are best taken with meals containing fats, while some minerals like calcium and iron can interfere with each other and should be taken separately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 13 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(13)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-bug text-primary mr-3"></i>
+                        I found an error or have a suggestion. How do I report it?
+                    </span>
+                    <i id="icon-13" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-13" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            We appreciate your feedback! To report errors or submit suggestions:
+                        </p>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
+                            <li>Visit our <a href="contact.html" class="text-primary hover:underline font-semibold">Contact page</a></li>
+                            <li>Select "Report a Bug or Error" or "Feedback or Suggestion" from the category dropdown</li>
+                            <li>Provide as much detail as possible (which supplement, what section, what's incorrect, etc.)</li>
+                            <li>Submit the form</li>
+                        </ol>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            We review all submissions and typically respond within 24-48 hours. Your input helps us improve the accuracy and usefulness of Natural Remedy Guide for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 14 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(14)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-lock text-primary mr-3"></i>
+                        Is my data private and secure?
+                    </span>
+                    <i id="icon-14" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-14" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Yes. We take your privacy seriously:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Your search queries and preferences are stored locally on your device only</li>
+                            <li>We do not collect or store personal health information</li>
+                            <li>Any analytics data collected is aggregated and anonymized</li>
+                            <li>We never sell or share your personal information</li>
+                            <li>Contact form submissions are encrypted and secure</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            For complete details, please review our <a href="privacy.html" class="text-primary hover:underline font-semibold">Privacy Policy</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 15 -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                <button onclick="toggleFAQ(15)" class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-gray-100 pr-4">
+                        <i class="fas fa-plus-circle text-primary mr-3"></i>
+                        Will you be adding more supplements?
+                    </span>
+                    <i id="icon-15" class="fas fa-chevron-down text-primary transition-transform"></i>
+                </button>
+                <div id="faq-15" class="faq-answer">
+                    <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-800">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Yes! We're continuously expanding our database. New supplements are added based on:
+                        </p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mt-4 mb-4">
+                            <li>User requests and suggestions</li>
+                            <li>Emerging scientific research</li>
+                            <li>Popularity and usage trends</li>
+                            <li>Evidence-based efficacy data</li>
+                        </ul>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            If there's a specific supplement you'd like to see added, please submit a request through our <a href="contact.html" class="text-primary hover:underline font-semibold">Contact page</a>. We prioritize supplements with strong scientific backing and broad user interest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Still Have Questions -->
+        <div class="bg-gradient-to-r from-primary/10 to-purple-600/10 dark:from-primary/20 dark:to-purple-600/20 p-8 rounded-2xl border border-primary/20 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Still Have Questions?</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+                If you didn't find the answer you were looking for, we're here to help!
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-purple-600 text-white font-semibold rounded-xl transition-colors shadow-lg">
+                <i class="fas fa-envelope mr-2"></i>
+                Contact Support
+            </a>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="mt-12 pt-6 border-t border-gray-300 dark:border-gray-700">
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="privacy.html" class="text-primary hover:underline">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="terms.html" class="text-primary hover:underline">Terms of Service</a>
+                <span class="text-gray-400">|</span>
+                <a href="about.html" class="text-primary hover:underline">About</a>
+                <span class="text-gray-400">|</span>
+                <a href="contact.html" class="text-primary hover:underline">Contact</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-16 py-6">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600 dark:text-gray-400">
+            <p>© 2024 Natural Remedy Guide | For educational purposes only</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode support
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // FAQ Accordion functionality
+        function toggleFAQ(num) {
+            const answer = document.getElementById(`faq-${num}`);
+            const icon = document.getElementById(`icon-${num}`);
+
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+                document.querySelectorAll('[id^="icon-"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                // Open this one
+                answer.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+</body>
+</html>
