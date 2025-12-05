@@ -1,7 +1,8 @@
 [{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.naturalremedyguide.app",
-        "sha256_cert_fingerprints": ["3E577295EE910BB610F5EC8E7900B78476722FDD92BBDC49071799FB7AF072E2F2"]
-    }]
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.naturalremedyguide.app",
+    "sha256_cert_fingerprints": ["3E577295EE910BB610F5EC8E7900B78476722FDD92BBDC49071799FB7AF072E2F2"]
+  }
+}]
