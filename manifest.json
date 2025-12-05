@@ -1,54 +1,24 @@
 {
-  "name": "Natural Remedy Guide - Comprehensive Supplement Database",
+  "name": "Natural Remedy Guide",
   "short_name": "Remedy Guide",
-  "description": "Evidence-based information on 145+ natural supplements, vitamins, minerals, and herbs. Includes interaction checker, timing guidance, and scientific sources.",
-  "start_url": "/",
+  "description": "Evidence-based information on 145+ natural supplements, vitamins, minerals, and herbs",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#5D5CDE",
-  "orientation": "any",
+  "scope": "./",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
-  ],
-  "categories": ["health", "medical", "lifestyle"],
-  "screenshots": [
-    {
-      "src": "screenshot-1.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "label": "Supplement database with search and filters"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "My Favorites",
-      "short_name": "Favorites",
-      "description": "View your saved supplements",
-      "url": "/?favorites=true",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Interaction Checker",
-      "short_name": "Check",
-      "description": "Check supplement interactions",
-      "url": "/?interaction=true",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "scope": "/",
-  "lang": "en-US",
-  "dir": "ltr"
+  ]
 }
