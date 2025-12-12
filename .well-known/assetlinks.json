@@ -3,6 +3,6 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.naturalremedyguide.app",
-    "sha256_cert_fingerprints": ["3E577295EE910BB610F5EC8E7900B78476722FDD92BBDC49071799FB7AF072E2F2"]
+    "sha256_cert_fingerprints": ["0A:DC:2D:70:36:9A:01:8E:80:48:29:10:DC:6E:40:94:DB:70:D7:D4:45:2E:7D:AF:2A:06:51:61:2A:CC:8F:C7"]
   }
 }]
